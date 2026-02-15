@@ -1,0 +1,22 @@
+import random
+numero_secr = int(random.randint(1, 100))
+jogando = True
+
+print("Adivinhe meu número de 1 a 100: ")
+
+while jogando:
+    palpite = int(input("Seu palpite: "))
+
+    if palpite == numero_secr:
+        print("Acertou!")
+        jogando = False  # Para o loop
+    else:
+        if palpite > numero_secr:
+            print("Menos...")
+        else:
+            print("Mais...")
+
+        continuar = input("Quer continuar jogando? (s/n): ")
+        if continuar.lower() == "n":
+            print("Obrigado por jogar!")
+            jogando = False
